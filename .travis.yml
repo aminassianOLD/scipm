@@ -1,0 +1,13 @@
+# scipm
+language: node_js
+node_js:
+  - "0.11"
+  - "0.10"
+  - "iojs-v1.1.0"
+
+notifications:
+    email:
+        on_success: never
+
+script: "npm run test_travis"
+after_script: "npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls"
