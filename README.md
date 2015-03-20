@@ -1,0 +1,2 @@
+# scipm
+SciTE package manger
