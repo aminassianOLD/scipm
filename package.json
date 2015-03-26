@@ -31,7 +31,6 @@
         "babel": "*",
         "dashdash": "*",
         "jayschema": "*",
-        "semver": "*",
         "shelljs": "*",
         "winston": "*"
     },

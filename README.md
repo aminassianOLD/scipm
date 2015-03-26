@@ -64,7 +64,6 @@ External libraries :
 - [babel](https://babeljs.io/) ([licence](https://github.com/babel/babel/blob/master/LICENSE))
 - [node-dashdash](https://github.com/trentm/node-dashdash) ([licence](https://github.com/trentm/node-dashdash/blob/master/LICENSE.txt))
 - [jayschema](https://github.com/natesilva/jayschema) ([licence](https://github.com/natesilva/jayschema/blob/master/LICENSE))
-- [node-semver](https://github.com/npm/node-semver) ([licence](https://github.com/npm/node-semver/blob/master/LICENSE))
 - [node-semver](https://github.com/npm/node-semver) ([licence](https://github.com/arturadib/shelljs/blob/master/LICENSE))
 - [winston](https://github.com/winstonjs/winston) ([licence](https://github.com/winstonjs/winston/blob/master/LICENSE))
 
