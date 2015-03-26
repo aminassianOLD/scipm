@@ -3,7 +3,7 @@
 [![npm package count download][badge-image-npm-package-count-download]][badge-url-npm-package-count-download]
 
 
-![scipm][icon-image64x64] scipm v0.1.0
+![scipm][icon-image64x64] scipm v0.1.1
 =================================================
 
 Introduction
@@ -15,7 +15,7 @@ SciTE package manager
 Installation
 ------------------------------------------
 
-scipm is a Node.js module, so you'll need to <a href="https://nodejs.org/">>have Node.js installed</a>.  This package is available on [npm](https://www.npmjs.com/package/scipm) as: ``scipm``
+scipm is a Node.js module, so you'll need to <a href="https://nodejs.org/">have Node.js installed</a>.  This package is available on [npm](https://www.npmjs.com/package/scipm) as: ``scipm``
 
 ```bash
 $ node --version

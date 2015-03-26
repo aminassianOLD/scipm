@@ -1,6 +1,6 @@
 {
     "name": "scipm",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "homepage": "http://aminassian.github.io/scipm",
     "description": "SciTE package manager",
     "author": { "name": "Alban Minassian" },
