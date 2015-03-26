@@ -12,6 +12,80 @@ Introduction
 SciTE package manager
 
 
+Installation
+------------------------------------------
+
+scipm is a Node.js module, so you'll need to <a href="https://nodejs.org/">>have Node.js installed</a>.  This package is available on [npm](https://www.npmjs.com/package/scipm) as: ``scipm``
+
+```bash
+$ node --version
+$ npm --version
+$ npm install -g scipm
+$ scipm --version
+$ scipm --help
+```
+
+Usage
+------------------------------------------
+
+
+@TODO
+
+
+
+Test
+------------------------------------------
+
+
+@TODO
+
+
+Made by
+------------------------------------------
+
+The original author of scipm is  [Alban Minassian](https://github.com/aminassian).
+
+If you like scipm and would like to support it, you are welcome to make a donation. It will surely be appreciated! Thanks!
+
+[![donate with your pledgie account][donate-image-pledgie]][donate-url-pledgie][![donate with your gratipay account][donate-image-gratipay]][donate-url-gratipay]
+
+License
+------------------------------------------
+
+[GPL-3.0](https://github.com/aminassian/scipm/blob/master/LICENCE.txt)
+
+Logo : fa-page from [Font-Awesome](http://fortawesome.github.io/Font-Awesome/) (licence [SIL OFL 1.1](http://scripts.sil.org/OFL))
+
+External libraries :
+
+- [underscore.js](http://underscorejs.org/) ([licence](https://github.com/jashkenas/underscore/blob/master/LICENSE))
+- [momentjs](http://momentjs.com/) ([licence](https://github.com/moment/moment/blob/develop/LICENSE))
+- [js2lua](https://github.com/Ensequence/js2lua) ([licence](https://github.com/Ensequence/js2lua#license))
+- [babel](https://babeljs.io/) ([licence](https://github.com/babel/babel/blob/master/LICENSE))
+- [node-dashdash](https://github.com/trentm/node-dashdash) ([licence](https://github.com/trentm/node-dashdash/blob/master/LICENSE.txt))
+- [jayschema](https://github.com/natesilva/jayschema) ([licence](https://github.com/natesilva/jayschema/blob/master/LICENSE))
+- [node-semver](https://github.com/npm/node-semver) ([licence](https://github.com/npm/node-semver/blob/master/LICENSE))
+- [node-semver](https://github.com/npm/node-semver) ([licence](https://github.com/arturadib/shelljs/blob/master/LICENSE))
+- [winston](https://github.com/winstonjs/winston) ([licence](https://github.com/winstonjs/winston/blob/master/LICENSE))
+
+
+Links
+------------------------------------------
+
+- www : http://aminassian.github.io/scipm
+- www [fr] : http://aminassian.github.io/scipm/index.fr.html
+- github : https://github.com/aminassian/scipm
+- issues : https://github.com/aminassian/scipm/issues
+- npm : https://www.npmjs.com/package/scipm
+- pledgie : https://pledgie.com/campaigns/28354 [donate]
+- gratipay : https://gratipay.com/aminassian [donate]
+
+Release Notes
+------------------------------------------
+
+
+@TODO
+
 
 
 ------------------------------------------

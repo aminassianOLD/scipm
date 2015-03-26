@@ -1,4 +1,5 @@
 {
+    "esnext": true,
     "requireCurlyBraces": ["if", "else", "for", "while", "do", "try", "catch"],
     "disallowImplicitTypeConversion": ["string"],
     "disallowKeywords": ["with"],

@@ -6,21 +6,11 @@
     "author": { "name": "Alban Minassian" },
     "contributors": [],
     "scripts": {
-        "istanbul": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -u exports --reporter spec --check-leaks",
-        "istanbul_win": ".\\node_modules\\.bin\\istanbul.cmd cover .\\node_modules\\mocha\\bin\\_mocha -- -u exports --reporter spec --check-leaks",
-        "jscs": "./node_modules/.bin/jscs --config=.jscs.json",
-        "jscs_win": ".\\node_modules\\.bin\\jscs.cmd --config=.jscs.json",
-        "jsdoc": "./node_modules/.bin/jsdoc lib README.md --recurse",
-        "jsdoc_win": ".\\node_modules\\.bin\\jsdoc.cmd lib README.md --recurse",
-        "jshint": "./node_modules/.bin/jshint lib/*.js",
-        "jshint_win": ".\\node_modules\\.bin\\jshint.cmd lib/*.js",
-        "mocha": "./node_modules/.bin/mocha --no-timeouts --reporter spec test/test.js",
-        "mocha_win": ".\\node_modules\\.bin\\mocha.cmd --no-timeouts --reporter spec test/test.js",
-        "test": "npm run mocha",
-        "test_win": "npm run mocha_win",
-        "test_travis": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks"
+
     },
-    "main" : "lib/main.js",
+    "bin" : {
+        "scipm" : "./bin/scipm"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/aminassian/scipm.git"
@@ -38,16 +28,15 @@
         "underscore": "*",
         "moment": "*",
         "js2lua": "*",
-        "jayschema": "*"
+        "babel": "*",
+        "dashdash": "*",
+        "jayschema": "*",
+        "semver": "*",
+        "shelljs": "*",
+        "winston": "*"
     },
     "devDependencies": {
-        "chai": "*",
-        "jscs": "*",
-        "jsdoc": "*",
-        "jshint": "*",
-        "mocha": "*",
-        "istanbul": "*",
-        "yadda": "*"
+
     },
     "engines": {
         "node": "*"
