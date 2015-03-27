@@ -26,11 +26,11 @@
 /**
  * @file bin/scipm
  * @author Alban Minassian
- * @version 0.1.1
+ * @version 0.1.2
  * @license GPL-3.0
  */
 
-require('babel/register');
+require("babel/polyfill");
 var result = require('../lib/cli')(process.argv);
 if (result !== undefined) {
     if (result.hasOwnProperty('output') &&  result.output) { console.log(result.output); }

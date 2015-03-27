@@ -1,11 +1,13 @@
 {
     "name": "scipm",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "homepage": "http://aminassian.github.io/scipm",
     "description": "SciTE package manager",
     "author": { "name": "Alban Minassian" },
     "contributors": [],
     "scripts": {
+        "compile": "babel -d lib/ src/",
+        "prepublish": "npm run compile"
 
     },
     "bin" : {
@@ -35,6 +37,7 @@
         "winston": "*"
     },
     "devDependencies": {
+        "babel": "*"
 
     },
     "engines": {
