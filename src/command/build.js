@@ -25,7 +25,7 @@
 /**
  * @file lib/command/build.js
  * @author Alban Minassian
- * @version 0.1.2
+ * @version 0.1.3
  * @license GPL-3.0
  */
 
@@ -99,7 +99,7 @@ var build = function(options, logger) {
 
         // test if node_modules/<dependencies>/package.json exist
         if ((islistScipmPackageNameEnabled === true) && (!fs.existsSync(packageFilePath ))) {
-            logger.error(`✖ " ${dependencie}" as  a no file "${packageFilePath}" ! exclude ...`);
+            logger.error(`✖ "${dependencie}" as no file "${packageFilePath}" ! exclude ...`);
             islistScipmPackageNameEnabled = false;
         }
 
@@ -113,22 +113,22 @@ var build = function(options, logger) {
             }
         }
 
-        // test required ``dependencies`` node
-        if ((islistScipmPackageNameEnabled === true) && (!depPackage.hasOwnProperty("dependencies"))) {
+        // test required ``keywords`` node
+        if ((islistScipmPackageNameEnabled === true) && (!depPackage.hasOwnProperty("keywords"))) {
             islistScipmPackageNameEnabled = false;
-            logger.error(`✖ exclude "${dependencie}" : missing node "dependencies" into "${path.join('node_modules', dependencie, 'package.json')}"`);
+            logger.error(`✖ exclude "${dependencie}" : missing node "keywords" ("${path.join('node_modules', dependencie, 'package.json')}")`);
         }
 
-        // test if ``scipm`` in node ``dependencies`` (force scipm dependencies to help search www)
-        if ((islistScipmPackageNameEnabled === true) && (Object.keys(depPackage.dependencies).indexOf("scipm") < 0)) {
+        // test if ``scipm-package`` in ``keywords`` (force scipm keywords to help search : https://www.npmjs.com/browse/keyword/scipm)
+        if ((islistScipmPackageNameEnabled === true) && (depPackage.keywords.indexOf("scipm-package") < 0)) {
             islistScipmPackageNameEnabled = false;
-            logger.error(`✖ exclude "${dependencie}" : missing "scipm" into node "dependencies" into "${path.join('node_modules', dependencie, 'package.json')}"`);
+            logger.error(`✖ exclude "${dependencie}" : missing "scipm-package" into node "keywords" ("${path.join('node_modules', dependencie, 'package.json')}")`);
         }
 
         // test required ``scipmchild`` node
         if ((islistScipmPackageNameEnabled === true) && (!depPackage.hasOwnProperty("scipmchild"))) {
             islistScipmPackageNameEnabled = false;
-            logger.error(`✖ exclude "${dependencie}" :  missing node "scipmchild" into "${path.join('node_modules', dependencie, 'package.json')}"`);
+            logger.error(`✖ exclude "${dependencie}" :  missing node "scipmchild" ("${path.join('node_modules', dependencie, 'package.json')}")`);
         }
 
         // validate schema node ``scipmchild``
@@ -136,7 +136,7 @@ var build = function(options, logger) {
             resultSchemaValidate = jaySchema.validate(depPackage.scipmchild, scipmChildSchemaJson);
             if (resultSchemaValidate.length !== 0) {
                 islistScipmPackageNameEnabled = false;
-                logger.error(`✖ exclude "${packageFilePath}" : is not a valid child scipm module  into "${path.join('node_modules', dependencie, 'package.json')}"\n${JSON.stringify(resultSchemaValidate, null, 4)}`);
+                logger.error(`✖ exclude "${packageFilePath}" : node "scipmchild" is not valid ("${path.join('node_modules', dependencie, 'package.json')}")\n${JSON.stringify(resultSchemaValidate, null, 4)}`);
             } else {
                     //  scipm child ;-)
                     listScipmPackageNameEnabled.push(dependencie)

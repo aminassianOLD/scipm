@@ -3,14 +3,13 @@
 [![npm package count download][badge-image-npm-package-count-download]][badge-url-npm-package-count-download]
 
 
-![scipm][icon-image64x64] scipm v0.1.2
+![scipm][icon-image64x64] scipm v0.1.3
 =================================================
 
 Introduction
 ------------------------------------------
 
-SciTE package manager
-
+[SciTE](http://www.scintilla.org/SciTE.html) package manager
 
 Installation
 ------------------------------------------
@@ -28,16 +27,21 @@ $ scipm --help
 Usage
 ------------------------------------------
 
+> **Warning** : scipm **erase** your current ``SciTEStartup.lua``. Save this file before run scipm !
 
-@TODO
+```
+mkdir myscipm
+cd myscipm
+npm init
+npm install scipm.exec --save
+npm install scipm.vardump --save
+npm install scipm.extman --save
+
+scipm build
+# restart SciTE
+```
 
 
-
-Test
-------------------------------------------
-
-
-@TODO
 
 
 Made by
@@ -54,7 +58,7 @@ License
 
 [GPL-3.0](https://github.com/aminassian/scipm/blob/master/LICENCE.txt)
 
-Logo : fa-page from [Font-Awesome](http://fortawesome.github.io/Font-Awesome/) (licence [SIL OFL 1.1](http://scripts.sil.org/OFL))
+Logo : fa-plane from [Font-Awesome](http://fortawesome.github.io/Font-Awesome/) (licence [SIL OFL 1.1](http://scripts.sil.org/OFL))
 
 External libraries :
 
@@ -82,10 +86,8 @@ Links
 Release Notes
 ------------------------------------------
 
-
-@TODO
-
-
+- 0.1.3 (2015/03/31):
+    - ``init`` init
 
 ------------------------------------------
 

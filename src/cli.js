@@ -25,7 +25,7 @@
 /**
  * @file lib/cli.js
  * @author Alban Minassian
- * @version 0.1.2
+ * @version 0.1.3
  * @license GPL-3.0
  */
 
@@ -62,20 +62,20 @@ var cli = function(cliArgv) {
             help: 'Verbose output. Use multiple times for more verbose.'
         },
         {
-            names: ['lua', 'l'],
-            type: 'string',
-            help: `full path to SciTEStartup.lua (default : "${path.resolve(process.env.HOME, 'SciTEStartup.lua')}")`,
-            helpArg: 'FILE',
-            helpWrap: false,
-            default: path.resolve(process.env.HOME, 'SciTEStartup.lua')
-        },
-        {
             names: ['project', 'p'],
             type: 'string',
             help: `full path to scipm project (default : "${path.resolve(process.cwd())}")`,
             helpArg: 'DIR',
             helpWrap: false,
             default: path.resolve(process.cwd())
+        },
+        {
+            names: ['lua', 'l'],
+            type: 'string',
+            help: `full path to SciTEStartup.lua (default : "${path.resolve(process.env.HOME, 'SciTEStartup.lua')}")`,
+            helpArg: 'FILE',
+            helpWrap: false,
+            default: path.resolve(process.env.HOME, 'SciTEStartup.lua')
         }
     ];
 
