@@ -25,7 +25,7 @@
 /**
  * @file lib/command/build.js
  * @author Alban Minassian
- * @version 0.1.3
+ * @version 0.1.4
  * @license GPL-3.0
  */
 
@@ -35,6 +35,8 @@ import path from 'path';
 import js2lua from 'js2lua';
 import moment from 'moment';
 import projectPackage from '../../package';
+
+import DependencyResolver from 'dependency-resolver';
 
 import JaySchema from 'jayschema';
 
@@ -61,6 +63,7 @@ var build = function(options, logger) {
     var scipmPackageJsonMasterFilePath = path.join(options.project, "package.json")
     var scipmPackageJsonMasterPath = options.project; // REMOVE / RENAME ...
     var sciteExtLuaDirectory = path.join(scipmPackageJsonMasterPath, "node_modules"); // dirname(package.json )/node_modules
+    var resolver = new DependencyResolver();
 
     // test if path options.project contains file package.json
     // -------------------------------------------------------------------------
@@ -138,13 +141,19 @@ var build = function(options, logger) {
                 islistScipmPackageNameEnabled = false;
                 logger.error(`✖ exclude "${packageFilePath}" : node "scipmchild" is not valid ("${path.join('node_modules', dependencie, 'package.json')}")\n${JSON.stringify(resultSchemaValidate, null, 4)}`);
             } else {
-                    //  scipm child ;-)
-                    listScipmPackageNameEnabled.push(dependencie)
-                    allPackageJsonEnabled[dependencie] = depPackage;
+                //  scipm child ;-)
+                // listScipmPackageNameEnabled.push(dependencie)
+                allPackageJsonEnabled[dependencie] = depPackage;
+
+                // push to resolver
+                resolver.add(dependencie);
+                _.each(Object.keys(depPackage.scipmchild.scipmDependencies), function(parentKey) {
+                    resolver.setDependency(dependencie, parentKey);
+                });
             }
         }
-
     }
+    listScipmPackageNameEnabled = resolver.sort();
     logger.debug("scipm package enabled :" + listScipmPackageNameEnabled.join(", "));
     logger.silly(JSON.stringify(allPackageJsonEnabled, null, 4));
 

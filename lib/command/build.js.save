@@ -29,7 +29,7 @@ var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["defau
 /**
  * @file lib/command/build.js
  * @author Alban Minassian
- * @version 0.1.4
+ * @version 0.1.3
  * @license GPL-3.0
  */
 
@@ -171,6 +171,8 @@ var build = function build(options, logger) {
     listScipmPackageNameEnabled = resolver.sort();
     logger.debug("scipm package enabled :" + listScipmPackageNameEnabled.join(", "));
     logger.silly(JSON.stringify(allPackageJsonEnabled, null, 4));
+
+    console.log(resolver.sort()); // => ['a', 'b', 'c', 'd'];
 
     // list lua dll
     // -------------------------------------------------------------------------

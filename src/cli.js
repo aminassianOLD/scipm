@@ -25,7 +25,7 @@
 /**
  * @file lib/cli.js
  * @author Alban Minassian
- * @version 0.1.3
+ * @version 0.1.4
  * @license GPL-3.0
  */
 
