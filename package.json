@@ -1,6 +1,6 @@
 {
     "name": "scipm",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "homepage": "http://aminassian.github.io/scipm",
     "description": "SciTE package manager",
     "author": { "name": "Alban Minassian" },
@@ -30,7 +30,7 @@
         "underscore": "*",
         "moment": "*",
         "js2lua": "*",
-        "babel": "*",
+        "babel": "5.8.34",
         "dashdash": "*",
         "jayschema": "*",
         "dependency-resolver": "*",
@@ -38,8 +38,6 @@
         "winston": "*"
     },
     "devDependencies": {
-        "babel": "*"
-
     },
     "engines": {
         "node": "*"
